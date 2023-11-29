@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Homepage</title>
+  <link rel="icon" type="image/png" href="https://vic.richcall.io/assets/icons/richcall.icon.150x150.png" sizes="150x150">
+  <link rel="icon" type="image/png" href="https://vic.richcall.io/assets/icons/richcall.icon.250x250.png" sizes="250x250">
+  <link rel="apple-touch-icon-precomposed" type="image/png" href="https://vic.richcall.io/admin/assets/icons/richcall.icon.250x250.png">
+  <meta name="msapplication-TileImage" content="https://vic.richcall.io/assets/icons/richcall.icon.250x250.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <script>
+      var widget = null;
+  </script>
+
+  <h2>Second page</h2>
+
+  <a href="index.html">Back</a>
+
+  <p>&copy; 2022 <a href="https://aurus5.com/richcall" title="Aurus LLC">Aurus LLC</a></p>
+
+  <script>
+    var RICHCALL_CALLER_ID = "+8-383-1234";
+    var RICHCALL_CALLER_NAME = "John Doe (Aurus LLC)";
+    var RICHCALL_EXTRA_ATTRIBUTES = {
+      field1: "value1",
+      field2: true,
+      field3:"Value 3"
+    };
+    var RICHCALL_BROWSER_API = true;
+
+    window.addEventListener('message',
+            function (e) {
+              console.warn('получено сообщение:', e.data);
+            }, false);
+  </script>
+
+  <script src="https://vic.richcall.io/js/cobrowser.js?logLevel=DEBUG"></script>
+  <script src="https://vic.richcall.io/js/richcall.widget.js?logLevel=DEBUG&&widget-code=0003-MAIN"></script>
+</body>
+</html>
